@@ -1,0 +1,150 @@
+.title-container {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  color: #00ca90;
+  font-weight: bold;
+  margin: 0;
+  animation: fadeInSlide 1.5s ease-in-out forwards, float 3s ease-in-out infinite;
+  opacity: 0; /* Ocultar inicialmente para la animación */
+}
+
+/* Animación inicial */
+@keyframes fadeInSlide {
+  0% {
+    transform: translateY(-50px); /* Empieza desplazado hacia arriba */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* Termina en su posición normal */
+    opacity: 1;
+  }
+}
+
+.animated-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 8px;
+  animation: fadeIn 2s ease-in-out forwards;
+  opacity: 0; /* Ocultar inicialmente para la animación */
+}
+
+/* Animación para el subtítulo */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.form-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%; /* Para acomodar ambos formularios */
+  transform: translateX(0); /* Posición inicial */
+}
+
+.form-container.show-register {
+  transform: translateX(-50%); /* Mueve el formulario de registro a la vista */
+}
+
+.login-form,
+.register-form {
+  width: 100%; /* Cada formulario ocupa la mitad */
+  padding: 32px;
+  box-sizing: border-box;
+  height: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 16px; /* Bordes suaves */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  text-align: center;
+}
+
+.login-form {
+  background-color: #ffffff;
+}
+
+.register-form {
+  background-color: #ffffff;
+}
+
+/* Estilos generales */
+.login-content {
+  --ion-background-color: #00ca90; /* Fondo claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegura que ocupe toda la pantalla */
+  padding: 0;
+  margin: 0;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Evita que se vean los formularios fuera de la pantalla */
+}
+
+
+.login-box h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #202124;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #5f6368; /* Gris claro */
+  margin-bottom: 24px;
+}
+
+/* Botones */
+.login-button {
+  --background: #00ca90; /* Fondo verde */
+  --background-activated: #388e3c; /* Fondo al presionar */
+  --background-focused: #66bb6a; /* Fondo al enfocar */
+  --color: white; /* Color del texto */
+  border-radius: 24px; /* Bordes redondeados */
+}
+
+.back-button {
+  --background: #f44336; /* Fondo rojo */
+  --background-focused: #e57373; /* Fondo al enfocar */
+  --color: white;
+  border-radius: 24px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* Estilos para los inputs */
+.custom-input {
+  --background: #ffffff;
+  --color: #333333;
+  border: 1px solid #00ca90;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-input:focus-within {
+  border-color: #333333;
+}
+
+

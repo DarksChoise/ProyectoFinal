@@ -1,0 +1,214 @@
+/* Contenedor del encabezado */
+.step-header {
+  display: flex; /* Alineación horizontal */
+  align-items: center; /* Centrado vertical */
+  gap: 15px; /* Espaciado entre el número y el texto */
+  font-size: 1.8rem; /* Tamaño del texto */
+  font-weight: bold;
+  color: #00ca90;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los inputs */
+.custom-input {
+  --background: #ffffff;
+  --color: #333333;
+  border: 1px solid #00ca90;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-input:focus-within {
+  border-color: #333333;
+}
+
+/* Estilo del número circular */
+.step-number {
+  display: flex; /* Para centrar contenido */
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Ancho y alto iguales para el círculo */
+  height: 50px;
+  font-size: 1.5rem; /* Tamaño del texto dentro del círculo */
+  color: white;
+  background-color: #00ca90;
+  border-radius: 50%;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.form-steps {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 500px;
+  border: 2px solid #00ca90;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-buttons {
+  display: flex;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.next-button{
+    --background: #00ca90; /* Fondo verde */
+    --background-activated: #388e3c; /* Fondo al presionar */
+    --background-focused: #66bb6a; /* Fondo al enfocar */
+    --color: white; /* Color del texto */
+    border-radius: 24px; /* Bordes redondeados */
+}
+
+.summary {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 500px;
+  background-color: #eafaf3;
+  border: 2px solid #00ca90;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.summary h2 {
+  color: #00ca90;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary pre {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Contenedor de botones */
+.tone-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Botón base */
+.tone-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 45px;
+  border: 2px solid #00ca90;
+  border-radius: 25px;
+  background: transparent;
+  color: #00ca90;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícono dentro del botón */
+.tone-button ion-icon {
+  font-size: 1.2rem;
+}
+
+/* Botón seleccionado */
+.tone-button.selected {
+  background: #00ca90;
+  color: white;
+  border-color: #00ca90;
+  box-shadow: 0 4px 10px rgba(0, 202, 144, 0.3);
+}
+
+/* Hover para botones no seleccionados */
+.tone-button:hover {
+  background: rgba(0, 255, 183, 0.1);
+  color: #005f3b;
+}
+
+/* Ícono dentro del botón */
+.tone-button ion-icon {
+  font-size: 1.2rem;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+  font-size: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.loading-message {
+  text-align: center;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animación de pulso para el texto */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.validation-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffe5e5; /* Fondo rojo claro */
+  border: 1px solid #ff6b6b; /* Borde rojo */
+  color: #b00020; /* Texto rojo oscuro */
+  border-radius: 8px; /* Bordes redondeados */
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

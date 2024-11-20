@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contenedor principal del navbar */
+.navbar-container {
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+/* Estilos generales del navbar */
+.custom-navbar {
+  display: flex;
+  justify-content: space-around; /* Distribuye uniformemente los botones */
+  align-items: center;
+  background-color: #ffffff;
+  height: 90px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Botones regulares */
+.custom-navbar ion-tab-button {
+  margin: 0 8px; /* Reduce la separación entre botones */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar ion-tab-button span {
+  margin-top: 4px; /* Espaciado entre icono y texto */
+}
+
+.custom-navbar ion-tab-button:hover {
+    color: #008f6b; /* Cambia el color del texto e iconos al pasar el cursor */
+    background-color: rgba(0, 143, 107, 0.1); /* Fondo con un tono verde claro */
+    border-radius: 12px; /* Añade bordes redondeados al hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.custom-navbar ion-tab-button.ion-tab-button-tab-active {
+    color: #00ca90; /* Color activo más brillante */
+    font-weight: bold; /* Resalta el texto activo */
+}
+
+.highlight-button {
+  position: absolute;
+  bottom: 50px; /* Ajusta la posición para alinear con el navbar */
+  left: 50%;
+  transform: translateX(-20%);
+  background-color: #00ca90;
+  border-radius: 50%;
+  width: 70px; /* Tamaño ajustado */
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.highlight-icon {
+  font-size: 32px; /* Icono ajustado */
+  color: white;
+}
+
+
+
+/* Hover para el botón destacado */
+.highlight-button:hover {
+    background-color: #008f6b; /* Cambia el color de fondo al pasar el cursor */
+    transform: translateX(-20%) scale(1.1); /* Aumenta ligeramente el tamaño */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Animación al seleccionar el botón */
+  .highlight-button:active {
+    animation: button-click-animation 0.4s ease forwards; /* Llama a la animación */
+  }
+  
+  /* Keyframes para la animación de clic */
+  @keyframes button-click-animation {
+    0% {
+      transform: translateX(-20%) scale(1); /* Estado inicial */
+    }
+    50% {
+      transform: translateX(-20%) scale(0.9); /* Reduce el tamaño momentáneamente */
+    }
+    100% {
+      transform: translateX(-20%) scale(1); /* Vuelve al tamaño original */
+    }
+  }
+
+/* Hover para los botones regulares */
+.custom-navbar ion-tab-button:hover {
+    color: #008f6b; /* Cambia el color del texto al pasar el cursor */
+    background-color: rgba(0, 143, 107, 0.1); /* Fondo con un tono verde claro */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Hover para el ícono dentro de los botones regulares */
+  .custom-navbar ion-tab-button:hover ion-icon {
+    color: #008f6b; /* Cambia el color del ícono */
+    transform: scale(1.2); /* Agranda el ícono ligeramente */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Hover para el texto (span) dentro de los botones regulares */
+  .custom-navbar ion-tab-button:hover span {
+    color: #008f6b; /* Cambia el color del texto */
+    font-size: 15px; /* Incrementa ligeramente el tamaño del texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Transiciones suaves */
+  }
+  
+  /* Botón activo */
+  .custom-navbar ion-tab-button.ion-tab-button-tab-active {
+    color: #00ca90; /* Color activo más brillante */
+    font-weight: bold; /* Resalta el texto activo */
+  }
+  
+  /* Ícono activo */
+  .custom-navbar ion-tab-button.ion-tab-button-tab-active ion-icon {
+    color: #00ca90; /* Color del ícono activo */
+    transform: scale(1.2); /* Agranda ligeramente el ícono activo */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Texto activo (span) */
+  .custom-navbar ion-tab-button.ion-tab-button-tab-active span {
+    color: #00ca90; /* Color del texto activo */
+    font-weight: bold; /* Resalta el texto */
+    font-size: 15px; /* Incrementa ligeramente el tamaño */
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  .ion-tab-button-tab-active {
+    color: #00ca90; /* Color del texto e icono activo */
+    font-weight: bold; /* Resalta el texto activo */
+    background-color: rgba(0, 202, 144, 0.1); /* Fondo claro */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .ion-tab-button-tab-active ion-icon {
+    transform: scale(1.2); /* Agranda el ícono */
+    color: #00ca90; /* Color del ícono activo */
+    transition: transform 0.3s ease;
+  }
+
+  .custom-navbar ion-tab-button:hover {
+    color: #008f6b; /* Cambia el color del texto */
+    background-color: rgba(0, 143, 107, 0.1); /* Fondo verde claro */
+    border-radius: 12px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .custom-navbar ion-tab-button:hover ion-icon {
+    transform: scale(1.2); /* Agranda el ícono ligeramente */
+    color: #008f6b;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .custom-navbar ion-tab-button:hover span {
+    font-size: 15px; /* Incrementa el tamaño del texto */
+    font-weight: bold; /* Resalta el texto */
+    transition: font-size 0.3s ease, color 0.3s ease;
+  }
+

@@ -1,0 +1,12 @@
+env/
+._pycache_/
+.env
+**/__pycache__/
+venv/
+Pipfile
+requirements2.txt
+docker
+Dockerfile
+.coverage
+docker-compose.yml
+.vscode
